@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LOAN PREDICTION</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="register">
+        <h2>Enter the Details</h2>
+        <form  method="POST" action="./predict">
+          <label>Credit History :  </label>
+          <br>
+          <input type="number" name="credithistory" id="credithistory" placeholder="Enter credit history">
+          <br><br><br>
+          <label>Applicant Income :  </label>
+          <br>
+          <input type="number" name="Applicantincome" id="Applicantincome" placeholder="Enter Applicant income">
+          <br><br><br>
+          <label>Coapplicant Income :  </label>
+          <br>
+          <input type="number" name="Coapplicantincome" id="Coapplicantincome" placeholder="Enter Coapplicant income">
+          <br><br><br>
+          <label>Loan Amount :  </label>
+          <br>
+          <input type="number" name="LoanAmount" id="LoanAmount" placeholder="Enter Loan amount">
+          <br><br><br>
+          <label>Loan Amount Term  :  </label>
+          <br>
+          <input type="number" name="Loan_Amount_Term" id="Loan_Amount_Term" placeholder="Enter Loan Amount Term">
+          <br><br><br>
+          <label>Gender : </label>
+          <br>
+          <select class="form" id="Gender" name="Gender">
+            <option selected>--Select gender--</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+          <br><br><br>
+          <label>Married : </label>
+          <br>
+          <select class="form" id="Married" name="Married">
+            <option selected>--Married or not--</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+          <br><br><br>
+          <label>Education : </label>
+          <br>
+          <select class="form" id="Education" name="Education">
+            <option selected>--Graduated or not--</option>
+            <option value="Graduated">Graduated</option>
+            <option value="Non-graduated">Non-graduated</option>
+          </select>
+          <br><br><br>
+          <label>Self Employed : </label>
+          <br>
+          <select class="form" id="Self_Employed" name="Self_Employed">
+            <option selected>--Self employed or not--</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+          <br><br><br>
+          <label>Property Area : </label>
+          <br>
+          <select class="form" id="Property_Area" name="Property_Area">
+            <option selected>--Urban or not--</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+          <br><br><br>
+          <label>Dependents : </label>
+          <br>
+          <select class="form" id="Dependents" name="Dependents">
+            <option selected>--How many dependents--</option>
+            <option value="Dependents_1">1</option>
+            <option value="Dependents_1">2</option>
+            <option value="Dependents_1">3+</option>
+          </select>
+          <br><br><br>
+          
+          <input type="submit" value="PREDICT" name="submit" id="submit">
+
+          
+        </form>
+      </div>
+    </div>
+    
+  <br><br><h3>{{prediction_text}}</h3>
+
+  </body>
+</html>
